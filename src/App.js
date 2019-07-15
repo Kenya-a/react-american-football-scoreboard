@@ -19,12 +19,12 @@ function App() {
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
-            <div className="home__score">{home}</div>
+            <div className="home__score">{10 + home}</div>
           </div>
           <div className="timer">00:03</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
-            <div className="away__score">{away}</div>
+            <div className="away__score">{7 + away}</div>
           </div>
         </div>
         <BottomRow />
@@ -32,11 +32,11 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" onClick={() => homeCount(home + 6)}>Home Touchdown</button>
+          <button className="homeButtons__touchdown" onClick={() => homeCount(home + 7)}>Home Touchdown</button>
           <button className="homeButtons__fieldGoal" onClick={() => homeCount(home + 3)}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick={() => awayCount(away + 6)}>Away Touchdown</button>
+          <button className="awayButtons__touchdown" onClick={() => awayCount(away + 7)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => awayCount(away + 3)}>Away Field Goal</button>
         </div>
       </section>
